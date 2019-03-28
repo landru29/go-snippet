@@ -1,0 +1,28 @@
+<snippet>
+    <prefix>http-server</prefix>
+    <displayName>Http server</displayName>
+    <description>Http server</description>
+    <body>
+        <![CDATA[
+port := $port
+host := "$host"
+
+http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
+    writer.Header().Set("Content-Type", "application/json")
+
+    bytes, errBody := ioutil.ReadAll(request.Body)
+    defer request.Body.Close()
+    if errBody != nil {
+        http.Error(writer, errBody.Error(), http.StatusInternalServerError)
+        return
+    }
+
+    fmt.Printf(string(bytes))
+})
+
+fmt.Printf("Listening on %s:%d\n", host, port)
+
+http.ListenAndServe(fmt.Sprintf("%s:%d", host, port), nil)
+        ]]>
+    </body>
+</snippet>

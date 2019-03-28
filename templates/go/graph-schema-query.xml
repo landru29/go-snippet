@@ -1,0 +1,16 @@
+<snippet>
+    <prefix>graph-schema-query</prefix>
+    <displayName>GraphQL query in Schema</displayName>
+    <description>GraphQL query in Schema</description>
+    <body>
+        <![CDATA[
+graphql.NewObject(
+	graphql.ObjectConfig{
+        Name: "$Query",
+        Description: "$Description",
+        Fields: graphql.Fields{},
+    },
+)
+        ]]>
+    </body>
+</snippet>

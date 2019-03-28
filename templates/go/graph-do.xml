@@ -1,0 +1,13 @@
+<snippet>
+    <prefix>graph-do</prefix>
+    <displayName>GraphQL Do process</displayName>
+    <description>GraphQL Do process</description>
+    <body>
+        <![CDATA[
+result := graphql.Do(graphql.Params{
+})
+
+json.NewEncoder(writer).Encode(result)
+        ]]>
+    </body>
+</snippet>

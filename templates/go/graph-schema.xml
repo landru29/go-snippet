@@ -1,0 +1,13 @@
+<snippet>
+    <prefix>graph-schema</prefix>
+    <displayName>GraphQL new Schema</displayName>
+    <description>GraphQL new Schema</description>
+    <body>
+        <![CDATA[
+graphql.NewSchema(
+	graphql.SchemaConfig{
+    },
+)
+        ]]>
+    </body>
+</snippet>

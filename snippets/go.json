@@ -1,0 +1,134 @@
+{
+	"go go-snippets graph-args-field": {
+		"prefix": "graph-args-field",
+		"displayName": "GraphQL new Args Field",
+		"description": "GraphQL new Args Field",
+		"body": [
+			"\"$name\": &graphql.ArgumentConfig{",
+			"    Type:        graphql.String,",
+			"    Description: \"$Description\",",
+			"},"
+		]
+	},
+	"go go-snippets graph-args": {
+		"prefix": "graph-args",
+		"displayName": "GraphQL args",
+		"description": "GraphQL args",
+		"body": [
+			"graphql.FieldConfigArgument{}"
+		]
+	},
+	"go go-snippets graph-do": {
+		"prefix": "graph-do",
+		"displayName": "GraphQL Do process",
+		"description": "GraphQL Do process",
+		"body": [
+			"result := graphql.Do(graphql.Params{",
+			"})",
+			"",
+			"json.NewEncoder(writer).Encode(result)"
+		]
+	},
+	"go go-snippets graph-input-field": {
+		"prefix": "graph-input-field",
+		"displayName": "GraphQL new Input field",
+		"description": "GraphQL new Input field",
+		"body": [
+			"\"$name\": &graphql.InputObjectFieldConfig{",
+			"    Type: graphql.String,",
+			"}"
+		]
+	},
+	"go go-snippets graph-input": {
+		"prefix": "graph-input",
+		"displayName": "GraphQL new Input",
+		"description": "GraphQL new Input",
+		"body": [
+			"graphql.NewInputObject(",
+			"\tgraphql.InputObjectConfig{",
+			"        Name: \"$Name\",",
+			"        Description: \"$Description\",",
+			"        Fields: graphql.InputObjectConfigFieldMap{},",
+			"    },",
+			")"
+		]
+	},
+	"go go-snippets graph-schema-query": {
+		"prefix": "graph-schema-query",
+		"displayName": "GraphQL query in Schema",
+		"description": "GraphQL query in Schema",
+		"body": [
+			"graphql.NewObject(",
+			"\tgraphql.ObjectConfig{",
+			"        Name: \"$Query\",",
+			"        Description: \"$Description\",",
+			"        Fields: graphql.Fields{},",
+			"    },",
+			")"
+		]
+	},
+	"go go-snippets graph-schema": {
+		"prefix": "graph-schema",
+		"displayName": "GraphQL new Schema",
+		"description": "GraphQL new Schema",
+		"body": [
+			"graphql.NewSchema(",
+			"\tgraphql.SchemaConfig{",
+			"    },",
+			")"
+		]
+	},
+	"go go-snippets graph-type-field": {
+		"prefix": "graph-type-field",
+		"displayName": "GraphQL new Type Field",
+		"description": "GraphQL new Type Field",
+		"body": [
+			"\"$name\": &graphql.Field {",
+			"    Type: graphql.String,",
+			"    Resolve: func(params graphql.ResolveParams) (interface{}, error) {",
+			"        return nil, nil",
+			"    },",
+			"}"
+		]
+	},
+	"go go-snippets graph-type": {
+		"prefix": "graph-type",
+		"displayName": "GraphQL new Type",
+		"description": "GraphQL new Type",
+		"body": [
+			"graphql.NewObject(",
+			"    graphql.ObjectConfig{",
+			"        Name: \"$name\",",
+			"        Description: \"$description\",",
+			"        Fields: graphql.Fields{},",
+			"    },",
+			")"
+		]
+	},
+	"go go-snippets http-server": {
+		"prefix": "http-server",
+		"displayName": "Http server",
+		"description": "Http server",
+		"body": [
+			"port := $port",
+			"host := \"$host\"",
+			"",
+			"http.HandleFunc(\"/\", func(writer http.ResponseWriter, request *http.Request) {",
+			"    writer.Header().Set(\"Content-Type\", \"application/json\")",
+			"",
+			"    bytes, errBody := ioutil.ReadAll(request.Body)",
+			"    defer request.Body.Close()",
+			"    if errBody != nil {",
+			"        http.Error(writer, errBody.Error(), http.StatusInternalServerError)",
+			"        return",
+			"    }",
+			"",
+			"    fmt.Printf(string(bytes))",
+			"})",
+			"",
+			"fmt.Printf(\"Listening on %s:%d\\n\", host, port)",
+			"",
+			"http.ListenAndServe(fmt.Sprintf(\"%s:%d\", host, port), nil)"
+		]
+	}
+}

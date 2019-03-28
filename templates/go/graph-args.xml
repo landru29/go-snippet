@@ -1,0 +1,10 @@
+<snippet>
+    <prefix>graph-args</prefix>
+    <displayName>GraphQL args</displayName>
+    <description>GraphQL args</description>
+    <body>
+        <![CDATA[
+graphql.FieldConfigArgument{}
+        ]]>
+    </body>
+</snippet>

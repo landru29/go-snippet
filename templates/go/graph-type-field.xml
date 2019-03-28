@@ -1,0 +1,15 @@
+<snippet>
+    <prefix>graph-type-field</prefix>
+    <displayName>GraphQL new Type Field</displayName>
+    <description>GraphQL new Type Field</description>
+    <body>
+        <![CDATA[
+"$name": &graphql.Field {
+    Type: graphql.String,
+    Resolve: func(params graphql.ResolveParams) (interface{}, error) {
+        return nil, nil
+    },
+}
+        ]]>
+    </body>
+</snippet>

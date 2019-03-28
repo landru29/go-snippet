@@ -1,0 +1,16 @@
+<snippet>
+    <prefix>graph-input</prefix>
+    <displayName>GraphQL new Input</displayName>
+    <description>GraphQL new Input</description>
+    <body>
+        <![CDATA[
+graphql.NewInputObject(
+	graphql.InputObjectConfig{
+        Name: "$Name",
+        Description: "$Description",
+        Fields: graphql.InputObjectConfigFieldMap{},
+    },
+)
+        ]]>
+    </body>
+</snippet>

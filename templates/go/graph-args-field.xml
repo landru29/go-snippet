@@ -1,0 +1,13 @@
+<snippet>
+    <prefix>graph-args-field</prefix>
+    <displayName>GraphQL new Args Field</displayName>
+    <description>GraphQL new Args Field</description>
+    <body>
+        <![CDATA[
+"$name": &graphql.ArgumentConfig{
+    Type:        graphql.String,
+    Description: "$Description",
+},
+        ]]>
+    </body>
+</snippet>

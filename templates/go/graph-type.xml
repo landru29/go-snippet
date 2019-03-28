@@ -1,0 +1,16 @@
+<snippet>
+    <prefix>graph-type</prefix>
+    <displayName>GraphQL new Type</displayName>
+    <description>GraphQL new Type</description>
+    <body>
+        <![CDATA[
+graphql.NewObject(
+    graphql.ObjectConfig{
+        Name: "$name",
+        Description: "$description",
+        Fields: graphql.Fields{},
+    },
+)
+        ]]>
+    </body>
+</snippet>
